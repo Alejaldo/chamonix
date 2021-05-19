@@ -10,7 +10,9 @@ class User < ApplicationRecord
   validates :name, presence: true, length: {maximum: 35}
   validates :email, presence: true, length: {maximum: 255}, uniqueness: true, format: { with: VALID_EMAIL }
 
+  private
+
   def set_name
-  self.name = "Пользователь №#{rand(777)}" if self.name.blank?
-end
+    self.name = "Пользователь №#{rand(777)}" if self.name.blank?
+  end
 end
