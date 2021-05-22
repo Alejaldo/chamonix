@@ -30,5 +30,31 @@ ru:
 
   # Перевод названия приложения и компании-разработчика
   app:
-    name: 'Барбекю'
-    company: 'Барбекю Capital'
+    name: 'Chamonix'
+    company: 'Chamonix Capital'
+
+  button:
+    profile: 'Профиль'
+    sign_out: 'Выйти'
+    sign_in: 'Войти'
+    registration: 'Зарегистрироваться'
+    change: 'Изменить'
+    create_event: 'Создать событие'
+    save: 'Сохранить'
+    edit_profile: 'Редактировать профиль'
+    back: 'Вернуться'
+    change_password: 'Сменить пароль'
+    confirm: 'Подтвердить'
+    forget_password: 'Забыли пароль?'
+
+  titles:
+    edit_profile: 'Редактирование профиля'
+    edit_event: 'Редактирование события'
+    registration: 'Регистрация'
+    forget_password: 'Забыли пароль?'
+    email: 'Электронный адрес'
+    your_name: 'Ваше имя'
+    minimum_password_length: 'символов минимум'
+    enter: 'Вход'
+    events: 'События'
+    new_event: 'Новое событие'

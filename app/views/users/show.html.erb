@@ -1,10 +1,10 @@
 <div class="text-center">
   <h1><%= @user.name %></h1>
 
-  <%= image_tag user_avatar(@user) %>
+  <%= user_avatar(@user) %>
 
   <% if @user == current_user %>
-    <p class="buffer-top"><%= link_to 'Редактировать профиль',
+    <p class="buffer-top"><%= link_to words_translate('button.edit_profile'),
       edit_user_path(@user), class: 'btn btn-default' %></p>
   <% end %>
 

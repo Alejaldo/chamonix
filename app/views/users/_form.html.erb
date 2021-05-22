@@ -6,13 +6,17 @@
     <%= f.text_field :name, class: 'form-control' %>
   </div>
 
+  <br/>
+
   <div class="form-group">
     <%= f.label :email %>
-    <%= f.text_field :email, class: 'form-control' %>
+    <%= f.email_field :email, class: 'form-control' %>
   </div>
 
+  <br/>
+
   <div class="actions">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-    или <%= link_to 'вернуться', :back %>
+    <%= f.submit words_translate('button.save'), class: 'btn btn-primary' %>
+    или <%= link_to words_translate('button.back'), :back %>
   </div>
 <% end %>

@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="col col-md-10 col-lg-7">
 
-      <h1 class="text-center login-title">Регистрация</h1>
+      <h1 class="text-center login-title"><%= t 'titles.registration' %></h1>
       <div class="account-wall">
         <%= image_tag 'https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120', class: 'profile-img' %>
 
@@ -12,19 +12,19 @@
             <%= render "devise/shared/error_messages", resource: resource %>
 
             <div class="field">
-              <%= f.label :email, 'Электронный адрес' %><br />
+              <%= f.label :email, words_translate('titles.email') %><br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
             </div>
 
             <div class="field">
-              <%= f.label :name, 'Ваше имя' %><br />
+              <%= f.label :name, words_translate('titles.your_name') %><br />
               <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control' %>
             </div>
 
             <div class="field">
               <%= f.label :password %>
               <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> символов минимум)</em>
+              <em>(<%= @minimum_password_length %> <%= t 'titles.minimum_password_length' %> )</em>
               <% end %><br />
               <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
             </div>
@@ -35,7 +35,7 @@
             </div>
 
             <div class="actions text-center">
-              <%= f.submit "Зарегистрироваться", class: 'btn btn-primary btn-lg btn-block' %>
+              <%= f.submit words_translate('button.registration'), class: 'btn btn-primary btn-lg btn-block' %>
             </div>
 
           <% end %>
