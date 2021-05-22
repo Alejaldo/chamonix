@@ -8,6 +8,8 @@
         <div class="form-signin">
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
+            <%= render partial: 'partials/form_errors', locals: {model: @user} %>
+
             <div class="field">
               <%= f.label :email, words_translate('titles.email') %><br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>

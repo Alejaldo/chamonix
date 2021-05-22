@@ -58,3 +58,5 @@ ru:
     enter: 'Вход'
     events: 'События'
     new_event: 'Новое событие'
+    errors_part_one: 'В вашей форме'
+    errors_part_two: 'ошибок'
