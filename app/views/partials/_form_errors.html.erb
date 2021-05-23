@@ -3,7 +3,7 @@
 <% if errors.any? %>
   <div class="alert alert-danger alert-dismissible fade show" role="alert">
     <div class="lead buffer-bottom">
-      <strong><%= t 'titles.errors_part_one' %> <%= errors.count %> <%= t 'titles.errors_part_two' %></strong>
+      <strong><%= t 'titles.errors_part_one' %> <%= t 'titles.errors_part_two', count: errors.count %></strong>
     </div>
 
     <ul>

@@ -59,4 +59,7 @@ ru:
     events: 'События'
     new_event: 'Новое событие'
     errors_part_one: 'В вашей форме'
-    errors_part_two: 'ошибок'
+    errors_part_two:
+      one: "%{count} ошибка"
+      few: "%{count} ошибки"
+      many: "%{count} ошибок"
