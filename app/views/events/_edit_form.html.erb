@@ -1,0 +1,36 @@
+<%= form_for(@event) do |f| %>
+  <%= render partial: 'partials/form_errors', locals: {model: @event} %>
+
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :datetime %>
+    <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+
+  <br/>
+
+  <div class="actions">
+    <%= f.submit words_translate('button.save'), class: 'btn btn-primary' %>
+    или <%= link_to words_translate('button.back'), :back %>
+  </div>
+<% end %>
+
+<div class="delete-event">
+  <%= link_to words_translate('titles.delete_event'), @event, method: :delete,
+    data: { confirm: words_translate('titles.confirm_before_delete_event') },
+    class: 'delete-event-link' %>
+</div>

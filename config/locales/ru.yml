@@ -50,6 +50,8 @@ ru:
   titles:
     edit_profile: 'Редактирование профиля'
     edit_event: 'Редактирование события'
+    delete_event: 'Удалить событие'
+    confirm_before_delete_event: 'Вы уверены?'
     registration: 'Регистрация'
     forget_password: 'Забыли пароль?'
     email: 'Электронный адрес'
