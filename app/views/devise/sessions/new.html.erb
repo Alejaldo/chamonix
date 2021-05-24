@@ -7,16 +7,19 @@
 
         <div class="form-signin">
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
             <% resource.validate %>
             <%= render partial: 'partials/form_errors', locals: {model: @user} %>
 
             <div class="field">
-              <%= f.label :email, words_translate('titles.email') %><br />
+              <%= f.label :email, words_translate('titles.email') %>
               <%= f.email_field :email, autofocus: true, autocomplete: :off, class: 'form-control' %>
             </div>
 
+            <br />
+
             <div class="field">
-              <%= f.label :password %><br />
+              <%= f.label :password %>
               <%= f.password_field :password, autocomplete: :off, class: 'form-control' %>
             </div>
 
@@ -26,6 +29,8 @@
                 <%= f.label :remember_me %>
               </div>
             <% end %>
+
+            <br />
 
             <div class="actions text-center">
               <%= f.submit words_translate('button.sign_in'), class: 'btn btn-primary btn-lg btn-block' %>
