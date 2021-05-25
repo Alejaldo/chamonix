@@ -1,6 +1,6 @@
 class SubscriptionsController < ApplicationController
   before_action :set_event, only: %i[ create destroy ]
-  before_action :set_subscription, only: %i[ create destroy ]
+  before_action :set_subscription, only: %i[ destroy ]
 
   def create
     @new_subscription = @event.subscriptions.build(subscription_params)

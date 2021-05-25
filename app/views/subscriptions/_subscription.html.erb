@@ -5,11 +5,8 @@
     <em><%= subscription.user_name %></em>
   <% end %>
   <% if current_user_can_edit?(subscription) %>
-    <%= link_to(
-            fa_icon('times'),
-            event_subscription_path(subscription.event, subscription),
-            method: :delete,
-            data: {confirm: t('.destroy_confirm')}
-        ) %>
+    <%= link_to content_tag(:i, '', class: "bi bi-x-circle"),
+                event_subscription_path(subscription.event, subscription),
+                method: :delete, data: { confirm: t('.destroy_confirm') } %>
   <% end %>
 </span>
