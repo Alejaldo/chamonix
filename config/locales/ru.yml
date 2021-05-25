@@ -27,11 +27,18 @@ ru:
       destroyed: 'Мероприятие удалено!'
     users:
       updated: 'Ваш профиль обновлен!'
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'
 
   # Перевод названия приложения и компании-разработчика
   app:
     name: 'Chamonix'
     company: 'Chamonix Capital'
+  comments:
+    comment:
+    destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
 
   button:
     profile: 'Профиль'
