@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   VALID_EMAIL = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
-  has_many :events
-  has_many :comments
+  has_many :events, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :subscriptions, dependent: :destroy
 
   before_validation :set_name, on: :create
 
