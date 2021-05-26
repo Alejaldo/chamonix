@@ -2,14 +2,14 @@
   <div class="row justify-content-center">
     <div class="col col-md-10 col-lg-7">
 
-      <h1 class="text-center login-title"><%= t 'titles.registration' %></h1>
+      <h2 class="text-center login-title"><%= t 'titles.registration' %></h2>
       <div class="account-wall">
         <%= image_tag 'https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120', class: 'profile-img' %>
 
         <div class="form-signin">
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-            <%= render partial: 'partials/form_errors', locals: {model: @user} %>
+            <%= render partial: 'partials/multi_params_form_errors', locals: {model: @user} %>
 
             <div class="field">
               <%= f.label :email, words_translate('titles.email') %><br />

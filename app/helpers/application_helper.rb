@@ -1,5 +1,15 @@
 module ApplicationHelper
+  def flash_helper(level)
+    case level.to_sym
+      when :notice then "alert-light"
+      when :success then "alert-success"
+      when :error then "alert-danger"
+      when :alert then "alert-warning"
+      else "alert-info"
+    end
+  end
+
   def user_avatar(user)
-    image_pack_tag 'user.png'
+    'user.png'
   end
 end
