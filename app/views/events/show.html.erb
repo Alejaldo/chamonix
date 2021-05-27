@@ -17,7 +17,7 @@
 
           <% if current_user_can_edit?(@event) %>
             <div class="buffer-both">
-              <%= link_to words_translate('button.change'), edit_event_path(@event),
+              <%= link_to t('button.change'), edit_event_path(@event),
                 class: 'btn btn-primary' %>
             </div>
           <% end %>

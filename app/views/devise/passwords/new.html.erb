@@ -11,14 +11,14 @@
             <%= render partial: 'partials/multi_params_form_errors', locals: {model: @user} %>
 
             <div class="field">
-              <%= f.label :email, words_translate('titles.email') %><br />
+              <%= f.label :email, t('titles.email') %><br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
             </div>
 
             <br />
 
             <div class="actions text-center">
-              <%= f.submit words_translate('button.confirm'), class: 'btn btn-primary btn-lg btn-block' %>
+              <%= f.submit t('button.confirm'), class: 'btn btn-primary btn-lg btn-block' %>
             </div>
 
           <% end %>

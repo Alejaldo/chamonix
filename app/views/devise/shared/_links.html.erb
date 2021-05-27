@@ -1,11 +1,11 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to words_translate('button.sign_in'), new_session_path(resource_name) %><br />
+  <%= link_to t('button.sign_in'), new_session_path(resource_name) %><br />
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to words_translate('button.registration'), new_registration_path(resource_name) %><br />
+  <%= link_to t('button.registration'), new_registration_path(resource_name) %><br />
 <% end %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to words_translate('button.forget_password'), new_password_path(resource_name) %><br />
+  <%= link_to t('button.forget_password'), new_password_path(resource_name) %><br />
 <% end %>

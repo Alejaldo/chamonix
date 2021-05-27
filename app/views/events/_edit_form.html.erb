@@ -24,13 +24,13 @@
   <br/>
 
   <div class="actions">
-    <%= f.submit words_translate('button.save'), class: 'btn btn-primary' %>
-    или <%= link_to words_translate('button.back'), :back %>
+    <%= f.submit t('button.save'), class: 'btn btn-primary' %>
+    или <%= link_to t('button.back'), :back %>
   </div>
 <% end %>
 
 <div class="delete-event">
-  <%= link_to words_translate('titles.delete_event'), @event, method: :delete,
-    data: { confirm: words_translate('titles.confirm_before_delete_event') },
+  <%= link_to t('titles.delete_event'), @event, method: :delete,
+    data: { confirm: t('titles.confirm_before_delete_event') },
     class: 'delete-event-link' %>
 </div>

@@ -4,7 +4,7 @@
   <%= user_avatar(@user) %>
 
   <% if @user == current_user %>
-    <p class="buffer-top"><%= link_to words_translate('button.edit_profile'),
+    <p class="buffer-top"><%= link_to t('button.edit_profile'),
       edit_user_path(@user), class: 'btn btn-default' %></p>
   <% end %>
 
