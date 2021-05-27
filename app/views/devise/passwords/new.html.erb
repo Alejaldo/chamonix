@@ -8,7 +8,7 @@
         <div class="form-signin">
           <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
 
-            <%= render partial: 'partials/multi_params_form_errors', locals: {model: @user} %>
+            <%= render partial: 'partials/form_errors', locals: {model: @user} %>
 
             <div class="field">
               <%= f.label :email, t('titles.email') %><br />

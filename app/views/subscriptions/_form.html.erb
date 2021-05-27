@@ -1,5 +1,5 @@
 <%= form_for [@event, subscription] do |f| %>
-  <%= render partial: 'partials/multi_params_form_errors', locals: { model: subscription } %>
+  <%= render partial: 'partials/form_errors', locals: { model: subscription } %>
 
   <% unless user_signed_in? %>
     <div class="form-group">
