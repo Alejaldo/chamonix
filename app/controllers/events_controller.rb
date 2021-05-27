@@ -8,6 +8,8 @@ class EventsController < ApplicationController
   end
 
   def show
+    @new_comment = @event.comments.build(params[:comment])
+    @new_subscription = @event.subscriptions.build(params[:subscription])
   end
 
   def new
@@ -41,7 +43,7 @@ class EventsController < ApplicationController
   end
 
   private
-  
+
   def set_event
     @event = Event.find(params[:id])
   end
