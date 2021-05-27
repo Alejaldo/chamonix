@@ -18,6 +18,7 @@ class User < ApplicationRecord
 
   def set_name
     self.name = "Пользователь №#{rand(777)}" if self.name.blank?
+    self.name = "#{t('activerecord.models.user')} №#{rand(777)}" if self.name.blank?
   end
 
   def link_subscriptions

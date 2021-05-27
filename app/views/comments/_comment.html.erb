@@ -12,7 +12,7 @@
     <% if current_user_can_edit?(comment) %>
       <%= link_to(
             fa_icon('trash'), event_comment_path(comment.event, comment),
-            method: :delete, data: {confirm: t('.destroy_confirm')}
+            method: :delete, data: { confirm: t('.destroy_confirm') }
         ) %>
     <% end %>
   </p>

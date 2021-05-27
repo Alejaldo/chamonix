@@ -60,6 +60,8 @@ ru:
     change_password: 'Сменить пароль'
     confirm: 'Подтвердить'
     forget_password: 'Забыли пароль?'
+    subscribe: 'Подписаться'
+    send: 'Отправить'
 
   titles:
     edit_profile: 'Редактирование профиля'
@@ -79,3 +81,8 @@ ru:
       one: "%{count} ошибка"
       few: "%{count} ошибки"
       many: "%{count} ошибок"
+    organized_by: 'Организовал:'
+    user_have_no_events: 'Пользователь пока не организовал ни одного события'
+    invite_to_event: 'Приглашает:'
+    current_followers: 'Пойдут:'
+    start_to_follow: 'Я пойду:'

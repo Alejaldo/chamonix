@@ -1,5 +1,5 @@
 <%= form_for [@event, comment] do |f| %>
-    <%= render partial: 'partials/form_errors', locals: {model: comment} %>
+    <%= render partial: 'partials/form_errors', locals: { model: comment } %>
 
     <div class="form-group">
       <%= f.label :body %>
@@ -18,6 +18,6 @@
     <br/>
 
     <div class="actions">
-      <%= f.submit 'Отправить', class: 'btn btn-primary' %>
+      <%= f.submit t('button.send'), class: 'btn btn-primary' %>
     </div>
 <% end %>
