@@ -17,7 +17,7 @@ class User < ApplicationRecord
   private
 
   def set_name
-    if self.name.blank?
+    if self.name.blank? && !self.email.blank? && !self.password.blank? && !self.password_confirmation.blank?
       self.name = "#{I18n.t('activerecord.models.user')} №#{rand(777)}"
     end
   end
