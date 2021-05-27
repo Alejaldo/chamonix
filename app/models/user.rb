@@ -9,16 +9,15 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true, length: {maximum: 35}
-  validates :email, presence: true, length: {maximum: 255}, uniqueness: true, format: { with: VALID_EMAIL }
+  validates :name, presence: true, length: { maximum: 35 }
+  validates :email, presence: true, length: { maximum: 255 }, uniqueness: true, format: { with: VALID_EMAIL }
 
   after_commit :link_subscriptions, on: :create
 
   private
 
   def set_name
-    self.name = "Пользователь №#{rand(777)}" if self.name.blank?
-    self.name = "#{t('activerecord.models.user')} №#{rand(777)}" if self.name.blank?
+    self.name = "#{I18n.t('activerecord.models.user')} №#{rand(777)}" if self.name.blank?
   end
 
   def link_subscriptions
