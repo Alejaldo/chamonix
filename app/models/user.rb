@@ -5,8 +5,6 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :subscriptions, dependent: :destroy
 
-  before_validation :set_name, on: :create
-
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
   validates :name, presence: true, length: { maximum: 35 }
@@ -15,12 +13,6 @@ class User < ApplicationRecord
   after_commit :link_subscriptions, on: :create
 
   private
-
-  def set_name
-    if self.name.blank? && !self.email.blank? && !self.password.blank? && !self.password_confirmation.blank?
-      self.name = "#{I18n.t('activerecord.models.user')} №#{rand(777)}"
-    end
-  end
 
   def link_subscriptions
     Subscription.where(user_id: nil, user_email: self.email).update_all(user_id: self.id)
