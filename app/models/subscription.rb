@@ -8,7 +8,7 @@ class Subscription < ApplicationRecord
   validates :user_name, presence: true, unless: -> { user.present? }
   validates :user_email, presence: true, format: { with: VALID_EMAIL }, unless: -> { user.present? }
   validates :user_email, uniqueness: { scope: :event_id }, unless: -> { user.present? }
-  validate :registrated_user_email
+  validate :registrated_user_email, unless: -> { user.present? }
 
   def user_name
     if user.present?
