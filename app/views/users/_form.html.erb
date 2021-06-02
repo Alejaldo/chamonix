@@ -15,6 +15,14 @@
 
   <br/>
 
+  <div class="form-group">
+    <%= f.label :avatar %>
+    <p><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <br/>
+
   <div class="actions">
     <%= f.submit t('button.save'), class: 'btn btn-primary' %>
     или <%= link_to t('button.back'), :back %>

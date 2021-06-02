@@ -1,7 +1,7 @@
 <div class="text-center">
   <h1><%= @user.name %></h1>
 
-  <%= image_pack_tag(user_avatar(@user), class: 'img-icon') %>
+  <%= image_tag(user_avatar(@user), class: 'img-icon') %>
 
   <% if @user == current_user %>
     <p class="buffer-top"><%= link_to t('button.edit_profile'),

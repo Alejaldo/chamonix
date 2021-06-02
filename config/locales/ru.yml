@@ -11,6 +11,7 @@ ru:
       user:
         email: 'Email'
         name: 'Имя'
+        avatar: 'Автар'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
       event:
