@@ -1,17 +1,12 @@
-<%= form_with(model: photo) do |form| %>
-  <% if photo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+<%= form_for [@event, photo], html: { multipart: true } do |f| %>
+  <%= render partial: 'partials/form_errors', locals: { model: photo } %>
 
-      <ul>
-        <% photo.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class="form-group">
+    <%= f.label :photo %>
+    <%= f.file_field :photo %>
+  </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit 'Загрузить', class: 'btn btn-primary' %>
   </div>
 <% end %>
