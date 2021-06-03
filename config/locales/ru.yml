@@ -5,6 +5,7 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      photo: 'Фотография'
 
     # Перевод названий аттрибутов моделей
     attributes:
@@ -19,6 +20,8 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      photo:
+        photo: 'Фотография'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
@@ -77,7 +80,7 @@ ru:
     registration: 'Регистрация'
     forget_password: 'Забыли пароль?'
     email: 'Электронный адрес'
-    your_name: 'Ваше имя'
+    your_name: 'Ваше имя:'
     minimum_password_length: 'символов минимум'
     enter: 'Вход'
     events: 'События'
