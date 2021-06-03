@@ -2,9 +2,11 @@
   <%= render partial: 'partials/form_errors', locals: { model: photo } %>
 
   <div class="form-group">
-    <%= f.label :photo %>
+    <%= f.label :photo %> <br/>
     <%= f.file_field :photo %>
   </div>
+
+  <br/>
 
   <div class="actions">
     <%= f.submit t('button.upload'), class: 'btn btn-primary' %>
