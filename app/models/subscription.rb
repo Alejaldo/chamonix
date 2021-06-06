@@ -31,13 +31,13 @@ class Subscription < ApplicationRecord
 
   def event_creator
     if event.user == user
-      errors.add(:email, I18n.t('titles.event_creator'))
+      errors.add(:user_email, :event_creator)
     end
   end
 
   def registrated_user_email
     if User.exists?(email: user_email)
-      errors.add(:email, I18n.t('titles.registrated_user_email'))
+      errors.add(:user_email, :registrated_user_email)
     end
   end
 end

@@ -23,6 +23,14 @@ ru:
       photo:
         photo: 'Фотография'
 
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              registrated_user_email: 'Невозможно использовать данный адрес электронной почты'
+              event_creator: 'Создатель события не может подписаться на своё же событие'
+
   # Перевод сообщений, которые отправляет контроллер
   controllers:
     events:
@@ -96,6 +104,4 @@ ru:
     current_followers: 'Пойдут:'
     start_to_follow: 'Я пойду:'
     your_comment: 'Ваш комментарий:'
-    registrated_user_email: 'Невозможно использовать данный адрес электронной почты'
-    event_creator: 'Создатель события не может подписаться на своё же событие'
     add: 'Добавил'
