@@ -1,0 +1,10 @@
+<%= t '.title' %>
+--------------------------------
+<%= t '.name' %>: <%= @name %>
+<%= t '.email' %>: <%= link_to @email, "mailto:#{@email}" %>
+
+--------------------------------
+
+<%= t '.event' %>: <%= link_to @event.title, @event %>
+<%= t '.datetime' %>: <%= l @event.datetime %>
+<%= t '.owner' %>: <%= @event.user.name %>

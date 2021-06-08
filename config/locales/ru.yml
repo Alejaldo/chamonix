@@ -12,7 +12,7 @@ ru:
       user:
         email: 'Email'
         name: 'Имя'
-        avatar: 'Автар'
+        avatar: 'Аватар'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
       event:
@@ -62,6 +62,29 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    photo:
+      title: "Новое фото"
+      photo_link: "Ссылка на фото"
+      event: "Событие"
+      datetime: "Состоится"
+      owner: "Фото загружено"
+      author: "Автор"
 
   button:
     profile: 'Профиль'
