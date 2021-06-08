@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col col-md-10 col-lg-7">
+
+      <h2 class="text-center login-title"><%= t('.change_your_password') %></h2>
+      <div class="account-wall">
+
+        <div class="form-signin">
+          <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+
+            <%= render partial: 'partials/form_errors', locals: {model: @user} %>
+            <%= f.hidden_field :reset_password_token %>
+
+            <div class="field">
+              <%= f.label :password, t('.new_password') %><br />
+              <% if @minimum_password_length %>
+                <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em><br />
+              <% end %>
+              <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: 'form-control' %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation, t('.confirm_new_password') %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+            </div>
+
+            <br />
+
+            <div class="actions text-center">
+              <%= f.submit t('.change_my_password'), class: 'btn btn-primary btn-lg btn-block' %>
+            </div>
+
+          <% end %>
+        </div>
+      </div>
+
+      <div class="text-center new-account">
+        <%= render "devise/shared/links" %>
+      </div>
+
+    </div>
+  </div>
+</div>
