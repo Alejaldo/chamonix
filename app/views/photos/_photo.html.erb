@@ -1,4 +1,6 @@
-<div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
-  <%= t('titles.add') %> <%= render partial: 'users/user', object: photo.user %>
-</div>
+<% if photo.photo.url.present? %>
+  <div class="event-photo buffer-both">
+    <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+    <%= t('titles.add') %> <%= render partial: 'users/user', object: photo.user %>
+  </div>
+<% end %>
