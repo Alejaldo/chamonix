@@ -32,11 +32,3 @@ module Bbq
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
-
-module Mailjet
-  class Application < Rails::Application
-    # config.load_default 6.0
-    config.generators.system_tests = nil
-    config.action_mailer.delivery_method = :mailjet
-  end
-end
