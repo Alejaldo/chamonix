@@ -128,3 +128,6 @@ ru:
     start_to_follow: 'Я пойду:'
     your_comment: 'Ваш комментарий:'
     add: 'Добавил'
+    email_about_new_subscription: 'Новая подписка'
+    email_about_new_comment: 'Новый комментарий'
+    email_about_new_photo: 'Новая фотография'
