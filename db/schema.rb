@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_03_044624) do
+ActiveRecord::Schema.define(version: 2021_06_13_153954) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2021_06_03_044624) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
+    t.string "pincode"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
