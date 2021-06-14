@@ -36,10 +36,12 @@
 
       <div class="event-photos">
         <div class="event-photos-gallery">
+          <h3><%= t('titles.all_event_photos') %></h3>
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
 
         <div class="event-photo-form">
+          <h3><%= t('titles.upload_a_photo') %></h3>
           <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
         </div>
       </div>
