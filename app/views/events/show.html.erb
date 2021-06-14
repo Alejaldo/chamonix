@@ -11,7 +11,7 @@
             <h3><%= l @event.datetime, format: :short %></h3>
 
             <h3><small><%= link_to @event.address,
-              "https://yandex.ru/maps/?text=#{@event.address}" %></small></h3>
+              "https://www.google.com/maps/place/#{@event.address}", target: :_blank, rel: "noopener noreferrer" %></small></h3>
             <p><%= @event.description %></p>
           </div>
 
@@ -28,6 +28,12 @@
 
   <div class="row">
     <div class="col-md-8">
+      <div class="google-div">
+        <% key = @google_maps_api_key %>
+        <% google_map = "https://www.google.com/maps/embed/v1/place?q=#{@event.address}&key=" + key %>
+        <iframe class="google-maps" loading="lazy" allowfullscreen src="<%= google_map %>"></iframe>
+      </div>
+
       <div class="event-photos">
         <div class="event-photos-gallery">
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
