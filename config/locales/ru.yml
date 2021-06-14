@@ -72,6 +72,7 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+      subject: "Новый комментарий @ %{title}"
     subscription:
       title: 'Новая подписка'
       name: 'Имя'
@@ -80,6 +81,7 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+      subject: "Новая подписка @ %{title}"
     photo:
       title: "Новое фото"
       photo_link: "Ссылка на фото"
@@ -87,6 +89,7 @@ ru:
       datetime: "Состоится"
       owner: "Фото загружено"
       author: "Автор"
+      subject: "Новая фотография @ %{title}"
 
   button:
     profile: 'Профиль'
@@ -130,8 +133,5 @@ ru:
     start_to_follow: 'Я пойду:'
     your_comment: 'Ваш комментарий:'
     add: 'Добавил'
-    email_about_new_subscription: 'Новая подписка'
-    email_about_new_comment: 'Новый комментарий'
-    email_about_new_photo: 'Новая фотография'
     pincode_form: 'Доступ только по пин-коду'
     to_the_main_page: 'На главную'
