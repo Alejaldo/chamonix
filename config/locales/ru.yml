@@ -133,3 +133,5 @@ ru:
     email_about_new_subscription: 'Новая подписка'
     email_about_new_comment: 'Новый комментарий'
     email_about_new_photo: 'Новая фотография'
+    pincode_form: 'Доступ только по пин-коду'
+    to_the_main_page: 'На главную'
