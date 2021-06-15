@@ -18,5 +18,7 @@ import 'bootstrap/dist/js/bootstrap'
 import '../styles/application'
 import '../styles/events'
 import '../styles/registration'
+import 'lightbox2/dist/js/lightbox-plus-jquery'
+import 'lightbox2/dist/css/lightbox'
 
 const images = require.context('../images', true)

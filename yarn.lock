@@ -3864,6 +3864,11 @@
     "lodash" "^4.17.5"
     "webpack-sources" "^1.1.0"
 
+"lightbox2@^2.11.3":
+  "integrity" "sha512-Q4v6il/OK9ttgEkAxSok/jrI/LUbqTrePFchqP2x/59qaDIZgJjEEc5Xf7peSMc/55Zo5PAgmX6EiN/BeEeUBQ=="
+  "resolved" "https://registry.npmjs.org/lightbox2/-/lightbox2-2.11.3.tgz"
+  "version" "2.11.3"
+
 "lines-and-columns@^1.1.6":
   "integrity" "sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA="
   "resolved" "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.1.6.tgz"
