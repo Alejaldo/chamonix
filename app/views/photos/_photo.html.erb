@@ -1,7 +1,7 @@
 
 <% if photo.photo.url.present? %>
-    <% image_title = "Добавил #{render partial: 'users/user', object: photo.user}" %>
   <div class="event-photo buffer-both">
+    <% image_title = "#{t('titles.add')} #{render partial: 'users/user', object: photo.user}" %>
     <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: { lightbox: 'event-photo', title: image_title } %>
   </div>
 <% end %>

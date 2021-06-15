@@ -38,7 +38,9 @@
           <% if @event.photos.except(@new_photo).present? %>
             <h3><%= t('titles.all_event_photos') %></h3>
           <% end %>
-          <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+          <div class="event-photos-gallery-uploaded">
+            <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+          </div>
         </div>
 
         <div class="event-photo-form">
