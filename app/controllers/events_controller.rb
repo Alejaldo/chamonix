@@ -12,7 +12,6 @@ class EventsController < ApplicationController
     @new_comment = @event.comments.build(params[:comment])
     @new_subscription = @event.subscriptions.build(params[:subscription])
     @new_photo = @event.photos.build(params[:photo])
-    @google_maps_api_key = ENV["GOOGLE_MAPS_API_KEY"].to_s
   end
 
   def new

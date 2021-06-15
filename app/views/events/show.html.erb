@@ -29,8 +29,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="google-div">
-        <% google_map = "https://www.google.com/maps/embed/v1/place?q=#{@event.address}&key=" + @google_maps_api_key %>
-        <iframe class="google-maps" loading="lazy" allowfullscreen src="<%= google_map %>"></iframe>
+        <iframe class="google-maps" loading="lazy" allowfullscreen src="<%= "https://www.google.com/maps/embed/v1/place?q=#{@event.address}&key=#{ENV["GOOGLE_MAPS_API_KEY"]}" %>"></iframe>
       </div>
 
       <div class="event-photos">
