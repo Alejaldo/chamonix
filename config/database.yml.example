@@ -12,7 +12,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: postgresql
-  user: deploy
-  password: 12345
-  database: myapp
+  adapter: # postgresql or others
+  user: # username
+  password: # your vps database password
+  database: # your database name on vps
