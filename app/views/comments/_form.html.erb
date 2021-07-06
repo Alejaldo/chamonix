@@ -6,13 +6,13 @@
       <%= f.text_area :body, class: 'form-control' %>
     </div>
 
-    <br/>
-
     <% unless user_signed_in? %>
-        <div class="form-group">
-          <%= f.label :user_name, t('titles.your_name') %>
-          <%= f.text_field :user_name, class: 'form-control' %>
-        </div>
+      <br/>
+      
+      <div class="form-group">
+        <%= f.label :user_name, t('titles.your_name') %>
+        <%= f.text_field :user_name, class: 'form-control' %>
+      </div>
     <% end %>
 
     <div class="actions">

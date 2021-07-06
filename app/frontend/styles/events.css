@@ -90,3 +90,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
+
+.event-comments .btn, .event-subscriptions .btn {
+  margin-top: 1rem;
+}
