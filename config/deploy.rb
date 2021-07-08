@@ -40,3 +40,4 @@ append :linked_dirs, "log", "tmp"
 
 set :assets_roles, :webpack
 set :assets_prefix, 'packs'
+set :assets_manifests, lambda { [release_path.join('public', fetch(:assets_prefix), 'manifest.json*')] }
