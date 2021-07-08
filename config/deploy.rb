@@ -24,7 +24,7 @@ set :deploy_to, "/home/deploy/www"
 append :linked_files, "config/database.yml", "config/master.key", ".env" 
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "tmp"
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'storage'
 #set :linked_dirs, fetch(:linked_dirs, []).push('public/packs', 'node_modules')
 
 # Default value for default_env is {}
@@ -42,4 +42,4 @@ append :linked_dirs, "log", "tmp"
 set :assets_roles, :webpack
 set :assets_prefix, 'packs'
 #set :assets_manifests, lambda { [release_path.join('public', fetch(:assets_prefix), 'manifest.json*')] }
-after 'deploy:publishing', 'deploy:restart'
+#after 'deploy:publishing', 'deploy:restart'
