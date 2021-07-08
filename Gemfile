@@ -50,9 +50,9 @@ group :development do
 
   gem 'capistrano', '~> 3.16', require: false
   gem 'capistrano-rails', '~> 1.6', require: false
-  gem 'capistrano-passenger', '~> 0.2'
-  gem 'capistrano-rbenv', '~> 2.2'
-  gem 'capistrano-bundler', '~> 2.0'
+  gem 'capistrano-passenger', '~> 0.2', require: false
+  gem 'capistrano-rbenv', '~> 2.2', require: false
+  gem 'capistrano-bundler', '~> 2.0', require: false
 end
 
 group :test do
