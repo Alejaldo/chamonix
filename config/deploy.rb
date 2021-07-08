@@ -8,7 +8,7 @@ set :repo_url, "git@github.com:Alejaldo/bbq.git"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/deploy/app_with_cap"
+set :deploy_to, "/home/deploy/www"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
