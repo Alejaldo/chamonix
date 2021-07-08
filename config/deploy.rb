@@ -8,7 +8,7 @@ set :repo_url, "git@github.com:Alejaldo/bbq.git"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/deploy/www"
+set :deploy_to, "/home/deploy/app_with_cap"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -21,12 +21,10 @@ set :deploy_to, "/home/deploy/www"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/master.key", 
-  ".env" 
+append :linked_files, "config/database.yml", "config/master.key", ".env" 
 
 # Default value for linked_dirs is []
-append :linked_dirs, ".bundle", "log", "tmp", "public/packs",
-  "node_modules", "public/uploads"
+append :linked_dirs, "log", "tmp"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -39,3 +37,6 @@ append :linked_dirs, ".bundle", "log", "tmp", "public/packs",
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+set :assets_roles, :webpack
+set :assets_prefix, 'packs'
