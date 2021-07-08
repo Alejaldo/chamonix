@@ -53,6 +53,7 @@ group :development do
   gem 'capistrano-passenger', '~> 0.2', require: false
   gem 'capistrano-rbenv', '~> 2.2', require: false
   gem 'capistrano-bundler', '~> 2.0', require: false
+  gem 'capistrano-webpacker-precompile', require: false
 end
 
 group :test do

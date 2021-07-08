@@ -34,6 +34,9 @@ require "capistrano/bundler"
 require "capistrano/rails"
 require "capistrano/passenger"
 
+require "capistrano/webpacker/precompile"
+
+
 set :rbenv_type, :user
 set :rbenv_ruby, '2.7.2'
 
