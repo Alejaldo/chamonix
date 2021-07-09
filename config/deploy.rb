@@ -26,8 +26,6 @@ append :linked_files, "config/database.yml", "config/master.key", ".env"
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
-# set :linked_dirs, fetch(:linked_dirs, []).push('public/packs', 'node_modules')
-
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
@@ -39,7 +37,3 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
-
-# set :assets_roles, :frontend
-# set :assets_prefix, 'packs'
-# set :assets_manifests, lambda { [release_path.join('public', fetch(:assets_prefix), 'manifest.json*')] }
