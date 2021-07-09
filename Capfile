@@ -34,7 +34,7 @@ require "capistrano/rails"
 require "capistrano/passenger"
 
 set :rbenv_type, :user
-set :rbenv_ruby, '2.7.2p137'
+set :rbenv_ruby, '2.7.2'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
