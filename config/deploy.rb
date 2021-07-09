@@ -39,4 +39,4 @@ append :linked_dirs, 'log', 'tmp'
 # set :ssh_options, verify_host_key: :secure
 
 set :assets_roles, :frontend
-set :assets_prefix, 'packs'
+# set :assets_prefix, 'packs'
