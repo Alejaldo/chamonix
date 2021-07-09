@@ -21,7 +21,7 @@ set :deploy_to, "/home/deploy/www"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/master.key", ".env" 
+append :linked_files, "config/database.yml", "config/master.key", ".env", "public/packs/manifest.json" 
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
@@ -40,6 +40,6 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-set :assets_roles, :frontend
-set :assets_prefix, 'packs'
+# set :assets_roles, :frontend
+# set :assets_prefix, 'packs'
 # set :assets_manifests, lambda { [release_path.join('public', fetch(:assets_prefix), 'manifest.json*')] }
