@@ -24,7 +24,8 @@ set :deploy_to, "/home/deploy/www"
 append :linked_files, "config/database.yml", "config/master.key", ".env" 
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "tmp"
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
+
 # set :linked_dirs, fetch(:linked_dirs, []).push('public/packs', 'node_modules')
 
 # Default value for default_env is {}
