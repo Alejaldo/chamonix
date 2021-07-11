@@ -140,3 +140,6 @@ ru:
     to_the_main_page: 'На главную'
     all_event_photos: 'Все фотографии события'
     upload_a_photo: 'Загрузка Вашей фотографии'
+  pundit:
+    non_authorized: 'Закрытый доступ. Требуется пинкод.'
+    incorrect_event_pincode: 'Введенный пинкод неверный.'
