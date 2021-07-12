@@ -16,7 +16,11 @@ class EventPolicy < ApplicationPolicy
   end
 
   def show?
-    owner? || record.pincode.blank? || record.true_pincode?(cookies["event_#{record.id}_pincode"])
+    return true if record.pincode.blank?
+    return true if user == record.user
+    return true if record.pincode_valid?(cookies["events_#{record.id}_pincode"])
+
+    false
   end
 
   class Scope < Scope

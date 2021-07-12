@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, except: %i[ show index ]
   before_action :set_event, except: %i[ index new create ]
-  after_action :verify_authorized, only: %i[ edit update destroy show create ]
+  after_action :verify_authorized, except: :index
 
   def index
     @events = Event.all
@@ -17,7 +17,7 @@ class EventsController < ApplicationController
     @new_comment = @event.comments.build(params[:comment])
     @new_subscription = @event.subscriptions.build(params[:subscription])
     @new_photo = @event.photos.build(params[:photo])
-
+  rescue Pundit::NotAuthorizedError
     flash.now[:alert] = t('pundit.incorrect_event_pincode') if params[:pincode].present?
     render 'password_form'
   end

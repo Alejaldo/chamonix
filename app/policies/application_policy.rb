@@ -1,8 +1,11 @@
 class ApplicationPolicy
-  attr_reader :user, :record
+  attr_reader :pincode_cookies, :record, :cookies, :user
 
-  def initialize(user, record)
-    @user = user
+  delegate :cookies, to: :pincode_cookies
+  delegate :user, to: :pincode_cookies
+
+  def initialize(pincode_cookies, record)
+    @pincode_cookies = pincode_cookies
     @record = record
   end
 
