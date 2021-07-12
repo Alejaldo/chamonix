@@ -26,6 +26,12 @@ gem "pundit"
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3', '~> 1.4'
+  gem 'capybara', '>= 3.26'
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+  gem 'launchy'
 end
 
 group :development do
@@ -43,14 +49,8 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'rspec-rails'
-  gem 'rails-controller-testing'
-  gem 'factory_bot_rails'
-  gem 'shoulda-matchers'
-  gem 'launchy'
 end
 
 group :production do
