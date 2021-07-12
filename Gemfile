@@ -46,8 +46,11 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'rspec-rails', '~> 4.0.1'
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
   gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+  gem 'launchy'
 end
 
 group :production do
