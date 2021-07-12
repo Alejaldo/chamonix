@@ -40,3 +40,4 @@ append :linked_dirs, 'log', 'tmp'
 
 # set :assets_roles, :frontend
 # set :assets_prefix, 'packs'
+Rake::Task["deploy:assets:backup_manifest"].clear_actions
