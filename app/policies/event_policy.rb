@@ -1,6 +1,10 @@
 class EventPolicy < ApplicationPolicy
+  def new?
+    logged_in?
+  end
+
   def create?
-    user.present?
+    logged_in?
   end
 
   def edit?
@@ -33,5 +37,9 @@ class EventPolicy < ApplicationPolicy
 
   def owner?
     user == record.user
+  end
+
+  def logged_in?
+    user.present?
   end
 end
