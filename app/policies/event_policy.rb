@@ -1,4 +1,10 @@
 class EventPolicy < ApplicationPolicy
+  class Scope < Scope
+    def resolve
+      scope.all
+    end
+  end
+  
   def new?
     logged_in?
   end
@@ -25,12 +31,6 @@ class EventPolicy < ApplicationPolicy
     return true if record.pincode_valid?(cookies["events_#{record.id}_pincode"])
 
     false
-  end
-
-  class Scope < Scope
-    def resolve
-      scope.all
-    end
   end
 
   private
