@@ -15,10 +15,9 @@
             <p><%= @event.description %></p>
           </div>
 
-          <% if current_user_can_edit?(@event) %>
+          <% if policy(@event).edit? %>
             <div class="buffer-both">
-              <%= link_to t('button.change'), edit_event_path(@event),
-                class: 'btn btn-primary' %>
+              <%= link_to t('button.change'), edit_event_path(@event), class: 'btn btn-primary' %>
             </div>
           <% end %>
         </div>
