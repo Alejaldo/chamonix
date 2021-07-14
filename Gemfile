@@ -21,7 +21,8 @@ gem 'rmagick'
 gem 'fog-aws'
 gem 'dotenv-rails'
 gem 'mailjet'
-gem "pundit"
+gem 'pundit'
+gem 'resque'
 
 group :development, :test do
   gem 'byebug'
