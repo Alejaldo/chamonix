@@ -7,7 +7,7 @@ class SubscriptionsController < ApplicationController
     @new_subscription.user = current_user
 
     if @new_subscription.save
-      EventMailer.subscription(@event, @new_subscription).deliver_now
+      EmailsJob.perform_later(@event, @new_subscription)
       redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else
       render 'events/show', alert: I18n.t('controllers.subscriptions.error')
