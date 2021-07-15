@@ -18,29 +18,3 @@ class EmailsJob < ApplicationJob
     end
   end
 end
-
-=begin
-EventMailer.subscription(@event, @new_subscription).deliver_now
-
-
-
-notify_about_photo(@event, @new_photo)
-
-def notify_about_photo(event, photo)
-  all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [photo.user&.email]).uniq
-
-  all_emails.each do |mail|
-    EventMailer.photo(event, photo, mail).deliver_now
-  end
-end
-
-notify_subscribers(@event, @new_comment)
-
-def notify_subscribers(event, comment)
-  all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [comment.user&.email]).uniq
-
-  all_emails.each do |mail|
-    EventMailer.comment(event, comment, mail).deliver_now
-  end
-end
-=end
