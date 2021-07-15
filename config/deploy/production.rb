@@ -3,12 +3,12 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "alejaldo.com", user: "deploy", roles: %w[ app db web ]
+server "alejaldo.com", user: "deploy", roles: %w[ app db web resque_worker ]
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 set :resque_environment_task, true
-set :workers, { 'bbq*' => 1 }
+set :workers, { "#{fetch(:application)}*" => 1 }
 
 # role-based syntax
 # ==================
