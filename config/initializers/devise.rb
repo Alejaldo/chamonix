@@ -273,9 +273,13 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   if Rails.env.development?
-    config.omniauth :facebook, ENV["FB_APP_ID_DEV"], ENV["FB_APP_SECRET_DEV"]
-    config.omniauth :vkontakte, ENV["VK_APP_ID_DEV"], ENV["VK_APP_SECRET_DEV"], scope: 'name, email'
+    CURRENT_ENV = "DEV"
+  elsif Rails.env.production?
+    CURRENT_ENV = "PROD"
   end
+
+  config.omniauth :facebook, ENV["FB_APP_ID_#{CURRENT_ENV}"], ENV["FB_APP_SECRET_#{CURRENT_ENV}"]
+  config.omniauth :vkontakte, ENV["VK_APP_ID_#{CURRENT_ENV}"], ENV["VK_APP_SECRET_#{CURRENT_ENV}"], scope: 'name, email'
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
