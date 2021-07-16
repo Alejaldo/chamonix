@@ -143,3 +143,5 @@ ru:
   pundit:
     non_authorized: 'Закрытый доступ. Требуется пинкод.'
     incorrect_event_pincode: 'Введенный пинкод неверный.'
+  omniauth:
+    sign_in: 'Вход через аккаунт'
