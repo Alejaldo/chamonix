@@ -32,7 +32,7 @@ class User < ApplicationRecord
       url = "https://facebook.com/#{id}"
       avatar_url = access_token.info.image.gsub('http', 'https')
     when 'vkontakte'
-      url = "https://vk.com/id#{id}"
+      url = "https://vk.com/#{id}"
       avatar_url = access_token.extra.raw_info.photo_400_orig
     end
 
