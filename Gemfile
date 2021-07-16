@@ -26,6 +26,7 @@ gem 'resque'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
+gem 'omniauth-rails_csrf_protection'
 
 group :development, :test do
   gem 'byebug'
