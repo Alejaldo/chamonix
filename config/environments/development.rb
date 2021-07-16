@@ -84,4 +84,6 @@ Rails.application.configure do
 
   config.active_job.queue_adapter = :async
   config.active_job.queue_name_prefix = 'bbq_dev'
+
+  config.hosts << "lvh.me"
 end

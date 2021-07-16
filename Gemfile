@@ -23,6 +23,9 @@ gem 'dotenv-rails'
 gem 'mailjet'
 gem 'pundit'
 gem 'resque'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
 
 group :development, :test do
   gem 'byebug'
