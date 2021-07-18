@@ -1,16 +1,16 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def facebook
-    omniauth_from_provider
+    provider
   end
 
   def vkontakte
-    omniauth_from_provider
+    provider
   end
 
   private
 
-  def omniauth_from_provider
-    @user = User.find_for_oauth(request.env['omniauth.auth'])
+  def provider
+    @user = User.find_for_provider_oauth(request.env['omniauth.auth'])
     provider = request.env['omniauth.auth'].provider
 
     if @user.nil?
