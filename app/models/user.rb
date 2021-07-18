@@ -16,10 +16,11 @@ class User < ApplicationRecord
 
   def self.find_for_provider_oauth(access_token)
     email = access_token.info.email
-    name = access_token.info.name
     user = where(email: email).first
 
     return user if user.present?
+
+    name = access_token.info.name
 
     provider = access_token.provider
     id = access_token.extra.raw_info.id
@@ -34,8 +35,8 @@ class User < ApplicationRecord
     end
 
     where(url: url, provider: provider).first_or_create! do |user|
-      user.name = name
       user.email = email
+      user.name = name
       user.remote_avatar_url = provider_avatar
       user.password = Devise.friendly_token.first(16)
     end
