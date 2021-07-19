@@ -17,6 +17,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user.destroy
+    flash[:success] = I18n.t('controllers.users.deleted')
+    redirect_to root_path
+  end
+
   private
 
   def set_current_user

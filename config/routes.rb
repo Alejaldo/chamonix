@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     post :show, on: :member
   end
 
-  resources :users, only: %i[ show edit update ]
+  resources :users, only: %i[ show edit update destroy ]
 end

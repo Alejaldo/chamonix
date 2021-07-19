@@ -7,5 +7,9 @@
     <p class="buffer-top">
       <%= link_to t('button.change_password'), edit_user_registration_path %>
     </p>
+
+    <div id="delete-profile">
+        <%= link_to t('titles.delete_user'), @user, method: :delete, data: { confirm: t('titles.confirm_before_delete') } %>
+    </div>
   </div>
 </div>
