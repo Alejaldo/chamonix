@@ -28,7 +28,7 @@ class User < ApplicationRecord
     case provider
     when 'facebook'
       url = "https://facebook.com/#{id}"
-      provider_avatar = access_token.info.image.gsub('http', 'https').gsub('picture?access_token', 'picture?width=1280&height=720&access_token')
+      provider_avatar = access_token.info.image.gsub('http', 'https').gsub('picture?access_token', 'picture?width=400&height=400&access_token')
     when 'vkontakte'
       url = "https://vk.com/#{id}"
       provider_avatar = access_token.extra.raw_info.photo_400_orig
