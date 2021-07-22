@@ -25,7 +25,6 @@ RSpec.describe User, type: :model do
 
     context 'when user is found by email' do
       let!(:existing_user) { FactoryBot.create(:user, email: ENV["MY_FB_EMAIL"]) }
-      let!(:some_other_user) { FactoryBot.create(:user) }
 
       it 'returns this user' do
         expect(User.find_for_provider_oauth(access_token)).to eq existing_user
@@ -36,7 +35,6 @@ RSpec.describe User, type: :model do
       let!(:existing_user) do
         FactoryBot.create(:user, provider: 'facebook', url: "https://facebook.com/#{ENV["MY_FB_ID"]}")
       end
-      let!(:some_other_user) { FactoryBot.create(:user) }
 
       it 'returns this user' do
         expect(User.find_for_provider_oauth(access_token)).to eq existing_user
