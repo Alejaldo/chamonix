@@ -52,6 +52,7 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.2', require: false
   gem 'capistrano-bundler', '~> 2.0', require: false
   gem 'capistrano-resque', require: false
+  gem 'capistrano-rails-console', require: false
 end
 
 group :test do
