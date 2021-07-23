@@ -278,7 +278,7 @@ Devise.setup do |config|
     CURRENT_ENV = "PROD"
   end
 
-  config.omniauth :facebook, ENV["FB_APP_ID_#{CURRENT_ENV}"], ENV["FB_APP_SECRET_#{CURRENT_ENV}"]
+  config.omniauth :facebook, ENV["FB_APP_ID_#{CURRENT_ENV}"], ENV["FB_APP_SECRET_#{CURRENT_ENV}"], image_size: { width: 400, height: 400 }
   config.omniauth :vkontakte, ENV["VK_APP_ID_#{CURRENT_ENV}"], ENV["VK_APP_SECRET_#{CURRENT_ENV}"], scope: 'name, email'
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
