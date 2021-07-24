@@ -8,7 +8,7 @@ server "alejaldo.com", user: "deploy", roles: %w[app db web resque_worker]
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 set :resque_environment_task, true
-set :workers, { "bbq*" => 1 }
+set :workers, { "chamonix*" => 1 }
 
 # role-based syntax
 # ==================

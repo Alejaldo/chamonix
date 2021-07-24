@@ -2,7 +2,7 @@
 lock "~> 3.16.0"
 
 set :application, "chamonix"
-set :repo_url, "git@github.com:Alejaldo/bbq.git"
+set :repo_url, "git@github.com:Alejaldo/chamonix.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

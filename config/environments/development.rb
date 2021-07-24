@@ -83,7 +83,7 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.active_job.queue_adapter = :async
-  config.active_job.queue_name_prefix = 'bbq_dev'
+  config.active_job.queue_name_prefix = 'chamonix_dev'
 
   config.hosts << "lvh.me"
 end
