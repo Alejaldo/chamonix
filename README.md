@@ -46,5 +46,5 @@ $ bin/webpack-dev-server
 (in separate terminal windows), navigate to `http://localhost:3000/users/sign_in` in your browser, put on `Вход через аккаунт Facebook`, put `access_token` (in terminal window where `rails s` has been executed) and than find your parameters.   
 11. If you want to make deployment to your vps (Digital Ocean for example), make sure you have configured the vps with Ruby, Ruby on Rails, PostgreSQL, Redis, etc. and execute 
 ```
-$ bundle exec cap production deployment
+$ bundle exec cap production deploy
 ``` 
