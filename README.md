@@ -1,6 +1,6 @@
 Chamonix
 ======================
-Ryby on Rails Web application for setting up meetings. You can join to already existing events or create your own.
+Ruby on Rails Web application for setting up meetings. You can join to already existing events or create your own.
 ### Link: https://alejaldo.com
 ----------------------
 ## Configuration
