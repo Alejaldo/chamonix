@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, except: %i[ show index ]
   before_action :set_event, except: %i[ index new create ]
-  after_action :verify_authorized, except: :index
+  after_action :verify_authorized, except: %i[ index new ]
   after_action :verify_policy_scoped, only: :index
 
   def index
